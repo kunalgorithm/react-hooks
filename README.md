@@ -19,11 +19,17 @@ A Todo and Counter Application using only functional React Components and the ne
 
 ## Usage
 
-In the project directory, you can run:
+Clone the project and run:
 
 ### `npm install && npm start`
 
+---
+
 ## Build It Yourself
+
+Using the new Hooks API with React isn't too difficult once you get a grasp of how React is emulating the class behavior under the hood.
+
+Here's how you can build the apps above applications yourself using `create-react-app`
 
 ```bash
 npx create-react-app react-hooks
