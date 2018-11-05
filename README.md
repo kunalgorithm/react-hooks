@@ -1,44 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Hooks Demo App
 
-## Available Scripts
+A Todo and Counter Application using only functional React Components and the new React Hooks API method `useState'.
+
+## Features
+
+- Uses stateful methods **without any React Class Components**
+  - changing the displayed app with the push of a button
+  - changing state with an HTML input form
+  - appending strings to an array (Todo App)
+  - incrementing a counter (Counter App)
+- Bootstrapped with [`create-react-app`](https://github.com/facebook/create-react-app)
+- Uses `react@16.7.0@alpha` and `react-dom@16.7.0@alpha`
+- Hot Module Reloading for easy development
+- Slick styles with [W3CSS](https://www.w3schools.com/w3css)
+
+<img width=400 height="auto" src="docs/screenshot-todos.png">
+<img width=400 height="auto" src="docs/screenshot-counter.png">
+
+## Usage
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install && npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Build It Yourself
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```bash
+npx create-react-app react-hooks
+cd react-hooks
+```
 
-### `npm test`
+Install cutting-edge libraries
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install --save react@16.7.0-alpha.0 react-dom@16.7.0-alpha.0
+npm install
+npm run start
+```
 
-### `npm run build`
+Create a new component `Counter.js` in `src/` and add the following funcitonal class
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
+import React, { useState } from "react";
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+export default function Counter() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  return (
+    <div>
+      <h2>Counter</h2>
+      <p>The count is currently {count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
 
-### `npm run eject`
+      <button onClick={() => setCount(count - 1)}>-</button>
+    </div>
+  );
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then import it into your application by adding `<Counter />` inside `App.js` along with the corresponding import statement `import Counter from "./Counter"`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### There you have it, all the benefits of state in React without all the clutter-code or oversized class components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Finally, you can add Hot-Reloading to your app by following [this article](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e) and some slick styles by using a CSS library like [Bootstrap](getbootstrap.com), [AntDesign](ant.design) or [W3CSS](https://www.w3schools.com/w3css)
