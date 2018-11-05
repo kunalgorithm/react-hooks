@@ -21,9 +21,15 @@ export default function Todos() {
       <p>Enter a task to complete.</p>
       <form onSubmit={handleSubmit}>
         <label>
-          <input value={text} onChange={handleChange} />
+          <input
+            value={text}
+            onChange={handleChange}
+            className="w3-input w3-round w3-border-0"
+          />
+          <button className="w3-btn w3-round w3-border w3-margin" type="submit">
+            Add
+          </button>
         </label>
-        <input type="submit" value="Submit" />
       </form>
       <ul>
         {todos.map((todo, index) => (

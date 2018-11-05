@@ -12,7 +12,7 @@ function App() {
           <div>
             <Todo />
             <button
-              className="w3-button w3-round w3-border"
+              className="w3-button w3-round w3-small"
               onClick={() => setScreen("Counter")}
             >
               Counter Example
@@ -22,8 +22,9 @@ function App() {
         {screen === "Counter" && (
           <div>
             <Counter />
+            <hr />
             <button
-              className="w3-button w3-round w3-border"
+              className="w3-button w3-round w3-small"
               onClick={() => setScreen("Todo")}
             >
               Todo Example

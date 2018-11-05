@@ -7,16 +7,16 @@ export default function Counter() {
   return (
     <div>
       <h2>Counter</h2>
-      <p>The count is currently {count}.</p>
+      <p>The count is currently {count}</p>
       <button
-        className="w3-button w3-round w3-border "
+        className="w3-button w3-round w3-border w3-margin w3-large"
         onClick={() => setCount(count + 1)}
       >
         +
       </button>
 
       <button
-        className="w3-button w3-round w3-border "
+        className="w3-button w3-round w3-border w3-margin w3-large"
         onClick={() => setCount(count - 1)}
       >
         -
