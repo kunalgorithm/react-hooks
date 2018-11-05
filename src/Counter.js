@@ -8,7 +8,12 @@ export default function Counter() {
     <div>
       <h2>Counter</h2>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <button
+        className="w3-button w3-round"
+        onClick={() => setCount(count + 1)}
+      >
+        Click me
+      </button>
     </div>
   );
 }

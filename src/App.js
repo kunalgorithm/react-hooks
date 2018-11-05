@@ -10,13 +10,23 @@ function App() {
       <header className="App-header">
         {screen === "Todo" && (
           <div>
-            <button onClick={() => setScreen("Counter")}>Counter</button>
+            <button
+              className="w3-button w3-round"
+              onClick={() => setScreen("Counter")}
+            >
+              Counter
+            </button>
             <Todo />
           </div>
         )}
         {screen === "Counter" && (
           <div>
-            <button onClick={() => setScreen("Todo")}>Todo</button>
+            <button
+              className="w3-button w3-round"
+              onClick={() => setScreen("Todo")}
+            >
+              Todo
+            </button>
             <Counter />
           </div>
         )}
