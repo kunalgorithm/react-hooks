@@ -14,8 +14,8 @@ A Todo and Counter Application using only functional React Components and the ne
 - Hot Module Reloading for easy development
 - Slick styles with [W3CSS](https://www.w3schools.com/w3css)
 
-<img width=400 height="auto" src="docs/screenshot-todos.png">
-<img width=400 height="auto" src="docs/screenshot-counter.png">
+<img src="docs/screenshot-todos.png">
+<img src="docs/screenshot-counter.png">
 
 ## Usage
 
