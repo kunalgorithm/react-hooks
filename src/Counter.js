@@ -7,12 +7,19 @@ export default function Counter() {
   return (
     <div>
       <h2>Counter</h2>
-      <p>You clicked {count} times</p>
+      <p>The count is currently {count}.</p>
       <button
-        className="w3-button w3-round"
+        className="w3-button w3-round w3-border "
         onClick={() => setCount(count + 1)}
       >
-        Click me
+        +
+      </button>
+
+      <button
+        className="w3-button w3-round w3-border "
+        onClick={() => setCount(count - 1)}
+      >
+        -
       </button>
     </div>
   );

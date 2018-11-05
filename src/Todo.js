@@ -3,29 +3,33 @@ import React, { useState } from "react";
 export default function Todos() {
   // Declare a new state variable, which we'll call "count"
   const [text, setText] = useState("");
+  const [todos, setTodos] = useState([]);
 
-  function handleChange(event) {
-    this.setText(event.target.value);
+  function handleChange(e) {
+    setText(e.target.value);
+  }
+  function handleSubmit(e) {
+    setTodos([...todos, text]);
+    e.preventDefault();
+    setText("");
   }
 
   return (
     <div>
-      <h2> Todo: </h2>
+      <h2> Todo List </h2>
+
       <p>Enter a task to complete.</p>
-      <form onSubmit={() => this.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>
-          Enter a task to complete:
-          <input
-            type="text"
-            value={text}
-            onChange={() => {
-              console.log("stop");
-            }}
-          />
+          <input value={text} onChange={handleChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
-      <h3>text: {text}</h3>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
     </div>
   );
 }
