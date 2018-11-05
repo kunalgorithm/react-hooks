@@ -1,6 +1,6 @@
 # React Hooks Demo App
 
-A Todo and Counter Application using only functional React Components and the new React Hooks API method `useState'.
+A Todo and Counter Application using only functional React Components and the new React Hooks API method `useState'. You can visit the live demo at [react-hooks.now.sh](https://react-hooks.now.sh).
 
 ## Features
 
@@ -69,4 +69,4 @@ Then import it into your application by adding `<Counter />` inside `App.js` alo
 
 ### There you have it, all the benefits of state in React without all the clutter-code or oversized class components.
 
-Finally, you can add Hot-Reloading to your app by following [this article](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e) and some slick styles by using a CSS library like [Bootstrap](getbootstrap.com), [AntDesign](ant.design) or [W3CSS](https://www.w3schools.com/w3css)
+Finally, you can add Hot-Reloading to your app by following [this article](https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e) and some slick styles by using a CSS library like [Bootstrap](https://getbootstrap.com), [AntDesign](https://ant.design) or [W3CSS](https://www.w3schools.com/w3css)
